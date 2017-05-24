@@ -5,53 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<<<<<<< HEAD
-<link href="./css/warning.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<form action="" method="post" name="form1">
-		用户名:<input type="text" name="user" size="32"> <input
-			type="submit" value="检测用户名" onclick="checkUser(form1.user)">
-		密码：<input type="password" name="pwd1" size="35"><br>
-		确认密码:<input type="password" name="pwd2" size="35"> <br>E-mail:<input
-			type="text" name="email" size="45"><br> <input
-			type="submit" value="注册">
-	</form>
-	<div id="toolTip"></div>
-</body>
-
-<script type="text/javascript">
-	//初始化函数
-	function createRequest(url) {
-		http_request = false;
-		if (window.XMLHttpRequest) {
-			http_request = new XMLHttpRequest();
-		} else if (window.ActiveXObject) {
-			try {
-				http_request = new ActiveXObject("Microsoft.XMLHTTP");
-			} catch (e) {
-
-			}
-
-		}
-		if (!http_request) {
-			alert("不能创建XMLHttpRequest对象");
-		}
-		http_request.onreadystatechange = getResult;
-		http_request.open("GET", url, true);
-		http_request.send(null);
-	}
-	//回调函数
-	function getResult() {
-		alert(http_request.readyState);
-		if (http_request.readyState == 4) {
-			if (http_request.status == 200) {
-				alert("页面请求正确!!!")
-				//document.getElementById("toolTip").innerHTML = http_request.responseText;
-				//document.getElementById("toolTip").style.display = "block";
-			} else {
-				alert("请求的页面有错误")
-=======
 <!-- <link href="./css/warning.css" rel="stylesheet" type="text/css" /> -->
 </head>
 <body>
@@ -84,21 +37,20 @@
 			alert("不能创建XMLHttpRequest对象");
 		}
 		http_request.onreadystatechange = getResult;
-		alert("标记1")
+		//alert("标记1")
 		http_request.open("GET", url, true);
-		alert("标记2")
+		//alert("标记2")
 		http_request.send(null);
 	}
 	//回调函数
 	function getResult() {
-		alert(http_request.readyState)
-		alert(http_request.status)
+		//alert(http_request.readyState)
+		//alert(http_request.status)
 		if (http_request.readyState == 4) {
 			if (http_request.status == 200) {
 				//alert("走到这里了")
 				document.getElementById("div1").innerHTML = http_request.responseText;
 				//document.getElementById("toolTip").style.display = "block";
->>>>>>> branch 'master' of https://github.com/qeeguan/master.git
 			}
 		}
 	}

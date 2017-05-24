@@ -5,18 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link href="./css/warning.css" rel="stylesheet" type="text/css" />
+<!-- <link href="./css/warning.css" rel="stylesheet" type="text/css" /> -->
 </head>
 <body>
 	<form action="" method="post" name="form1">
 		用户名:<input type="text" name="user" size="32"> <input
-			type="submit" value="检测用户名" onclick="checkUser(form1.user)">
+			type="button" value="检测用户名" onclick="checkUser(form1.user)">
 		密码：<input type="password" name="pwd1" size="35"><br>
 		确认密码:<input type="password" name="pwd2" size="35"> <br>E-mail:<input
 			type="text" name="email" size="45"><br> <input
 			type="submit" value="注册">
 	</form>
-	<div id="toolTip"></div>
+	<div id="div1"></div>
 </body>
 
 <script type="text/javascript">
@@ -44,10 +44,9 @@
 	function getResult() {
 		if (http_request.readyState == 4) {
 			if (http_request.status == 200) {
-				document.getElementById("toolTip").innerHTML = http_request.responseText;
+				//alert("走到这里了")
+				document.getElementById("div1").innerHTML = http_request.responseText;
 				//document.getElementById("toolTip").style.display = "block";
-			} else {
-				alert("请求的页面有错误")
 			}
 		}
 	}

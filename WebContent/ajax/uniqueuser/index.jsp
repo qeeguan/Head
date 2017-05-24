@@ -37,11 +37,15 @@
 			alert("不能创建XMLHttpRequest对象");
 		}
 		http_request.onreadystatechange = getResult;
+		alert("标记1")
 		http_request.open("GET", url, true);
+		alert("标记2")
 		http_request.send(null);
 	}
 	//回调函数
 	function getResult() {
+		alert(http_request.readyState)
+		alert(http_request.status)
 		if (http_request.readyState == 4) {
 			if (http_request.status == 200) {
 				//alert("走到这里了")

@@ -25,10 +25,9 @@
 	function deal_getInfo() {
 		document.getElementById("showinfo").innerHTML = this.req.responseText;
 	}
-	function recycle() {
+	window.onload = function() {
 		getInfo();
 		window.setInterval("getInfo()", 5000);
 	}
-	window.onload=function(){"getInfo()",5000);}
 </script>
 </html>

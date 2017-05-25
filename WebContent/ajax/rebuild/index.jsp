@@ -21,10 +21,14 @@
 	function getInfo() {
 		var loader = net.AjaxRequest("getinfo.jsp?nocache="
 				+ new Date().getTime(), deal_getInfo, onerror, "GET");
-		window.setInterval("getInfo()", 5);
 	}
 	function deal_getInfo() {
 		document.getElementById("showinfo").innerHTML = this.req.responseText;
 	}
+	function recycle() {
+		getInfo();
+		window.setInterval("getInfo()", 5000);
+	}
+	window.onload=function(){"getInfo()",5000);}
 </script>
 </html>

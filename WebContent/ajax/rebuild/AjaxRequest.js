@@ -11,9 +11,9 @@ net.AjaxRequest.prototype.loadDate = function(url, method, params) {
 	if (!method) {
 		method = "GET";
 	}
-	if (windos.XMLHttpRequest) {
+	if (window.XMLHttpRequest) {
 		this.req = new XMLHttpRequest();
-	} else if (windos.ActiveXObject) {
+	} else if (window.ActiveXObject) {
 		this.req = new ActiveXObject(Microsoft.XMLHTTP);
 	}
 	if (this.req) {

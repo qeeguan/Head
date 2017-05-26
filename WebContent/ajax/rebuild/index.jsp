@@ -14,12 +14,13 @@
 		</marquee>
 	</div>
 </body>
-<script type="text/javascript" src="AjaxRequest.js">
+<script type="text/javascript" src="../AjaxRequest.js"></script>
+<script type="text/javascript">
 	function onerror() {
 		alert("操作错误！");
 	}
 	function getInfo() {
-		var loader = net.AjaxRequest("getinfo.jsp?nocache="
+		var loader = new net.AjaxRequest("getinfo.jsp?nocache="
 				+ new Date().getTime(), deal_getInfo, onerror, "GET");
 	}
 	function deal_getInfo() {

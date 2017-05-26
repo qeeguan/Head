@@ -11,6 +11,7 @@ public class CityMap {
 		model.put("辽宁", new String[] { "沈阳", "大连", "鞍山", "抚顺", "本溪" });
 		model.put("北京", new String[] { "北京" });
 		model.put("广东", new String[] { "广州", "深圳", "东莞" });
+		model.put("海南", new String[] { "敏敏" });
 	}
 
 }

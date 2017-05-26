@@ -28,7 +28,7 @@
 	}
 	window.onload = function() {
 		getInfo();
-		window.setInterval("getInfo()", 5000);
+		//window.setInterval("getInfo()", 5000);
 	}
 </script>
 </html>

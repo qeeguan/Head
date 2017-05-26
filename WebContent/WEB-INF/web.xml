@@ -16,7 +16,6 @@
 		<filter-name>CountFilter</filter-name>
 		<url-pattern>/count/index.jsp</url-pattern>
 	</filter-mapping>
-	<!-- CalServlet 简易计算器 -->
 	<servlet>
 		<servlet-name>CalServlet</servlet-name>
 		<servlet-class>first.servlet.cal.CalServlet</servlet-class>
@@ -25,7 +24,6 @@
 		<servlet-name>CalServlet</servlet-name>
 		<url-pattern>/cal/CalServlet</url-pattern>
 	</servlet-mapping>
-	<!-- UploadServlet 文件上传 -->
 	<servlet>
 		<servlet-name>UploadServlet</servlet-name>
 		<servlet-class>first.servlet.uploadfile.UploadServlet</servlet-class>
@@ -34,7 +32,7 @@
 		<servlet-name>UploadServlet</servlet-name>
 		<url-pattern>/uploadfile/UploadServlet</url-pattern>
 	</servlet-mapping>
-	<!-- 利用Ajax实现省份市县动态变换 -->
+	<!-- 利用Ajax动态显示省份和市县 -->
 	<servlet>
 		<servlet-name>ZoneServlet</servlet-name>
 		<servlet-class>first.servlet.dropdown.ZoneServlet</servlet-class>
@@ -42,5 +40,14 @@
 	<servlet-mapping>
 		<servlet-name>ZoneServlet</servlet-name>
 		<url-pattern>/ajax/dropdown/ZoneServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 利用Ajax动态文件上传进度 -->
+	<servlet>
+		<servlet-name>UpLoad</servlet-name>
+		<servlet-class>first.servlet.processbar.UpLoad</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpLoad</servlet-name>
+		<url-pattern>/ajax/processbar/UpLoad</url-pattern>
 	</servlet-mapping>
 </web-app>

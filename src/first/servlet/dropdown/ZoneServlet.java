@@ -7,15 +7,16 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import first.javabean.dropdown.CityMap;
+
 /**
  * Servlet implementation class ZoneServlet
  */
-@WebServlet("/ZoneServlet")
+// @WebServlet("/ZoneServlet")
 public class ZoneServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -46,10 +47,10 @@ public class ZoneServlet extends HttpServlet {
 
 	private void getCity(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setCharacterEncoding("GBK");
+		response.setCharacterEncoding("UTF-8");
 		String result = "";
 		String selProvince = request.getParameter("parProvince");
-		selProvince = new String(selProvince.getBytes("ISO-8859-1"), "GBK");
+		selProvince = new String(selProvince.getBytes("ISO-8859-1"), "UTF-8");
 		CityMap cityMap = new CityMap();
 		Map<String, String[]> map = cityMap.model;
 		String[] arrCity = map.get(selProvince);
@@ -80,7 +81,7 @@ public class ZoneServlet extends HttpServlet {
 		String result = "";
 		CityMap cityMap = new CityMap();
 		Map<String, String[]> map = cityMap.model;
-		Set<String> set = map.ketSet();
+		Set<String> set = map.keySet();
 		Iterator it = set.iterator();
 		while (it.hasNext()) {
 			result = result + it.next() + ",";

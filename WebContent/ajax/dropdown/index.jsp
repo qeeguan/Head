@@ -22,7 +22,7 @@
 	}
 
 	function deal_getProvince() {
-		provinceArr = this.req.responseTest.split(","); //将获取的省份名称字符串分割为数组
+		provinceArr = this.req.responseText.split(","); //将获取的省份名称字符串分割为数组
 		for (i = 0; i < provinceArr.length; i++) { //	通过循环将数组中的省份名称添加到下拉列表中
 			document.getElementById("province").options[i] = new Option(
 					provinceArr[i], provinceArr[i]);

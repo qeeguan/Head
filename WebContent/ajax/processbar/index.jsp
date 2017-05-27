@@ -34,7 +34,7 @@
 		h = h.replace(/\s/g, ""); //去除字符串中的Unicode空白符
 		document.getElementById("progressPercent").style.display = "";
 		processPercent.innerHTML = h + "%";
-		document.getElementById("progressBar").style.display = "block";
+		document.getElementById("progressBar").style.display = "block"; //显示可见 (不可见为 ："none")
 	}
 	function onerror() {
 

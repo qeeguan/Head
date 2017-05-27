@@ -83,7 +83,7 @@ public class UpLoad extends HttpServlet {
 							break;
 						}
 						File tempFile = new File(fileName);
-						File file = new File(request.getRealPath("/upload"), tempFile.getName());
+						File file = new File(request.getRealPath("F:/"), tempFile.getName());
 						InputStream is = item.getInputStream();
 						int buffer = 1024;
 						int length = 0;

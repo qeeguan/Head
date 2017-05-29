@@ -8,7 +8,12 @@
 		<!-- 定义action -->
 		<action name="first">
 			<!-- 定义处理成功后的映射页面 -->
-			<result>/struts2/first.jsp</result>
+			<result>/struts2/text/first.jsp</result>
+		</action>
+		<action name="UserAction" class="first.struts2.UserAction">
+			<!-- 定义处理成功后的映射页面 -->
+			<result name="add">/struts2/action/add.jsp</result>
+			<result name="update">/struts2/action/update.jsp</result>
 		</action>
 	</package>
 </struts>

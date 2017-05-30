@@ -15,5 +15,17 @@
 			<result name="add">/struts2/action/add.jsp</result>
 			<result name="update">/struts2/action/update.jsp</result>
 		</action>
+		<action name="GreetingAction" class="first.struts2.greet.GreetingAction">
+			<!-- 定义处理成功后的映射页面 -->
+			<result>/struts2/greet/success.jsp</result>
+			<result name="error">/struts2/greet/error.jsp</result>
+		</action>
+		<action name="MapAction" class="first.struts2.map.MapAction">
+			<!-- 定义处理成功后的映射页面 -->
+			<result>/struts2/map/success.jsp</result>
+		</action>
+		<action name="OgnlAction" class="first.struts2.ognl.OgnlAction">
+			<result>/struts2/ognl/success.jsp</result>
+		</action>
 	</package>
 </struts>

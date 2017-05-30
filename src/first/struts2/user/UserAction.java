@@ -1,4 +1,4 @@
-package first.struts2;
+package first.struts2.user;
 
 import com.opensymphony.xwork2.ActionSupport;
 

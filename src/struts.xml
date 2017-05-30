@@ -10,7 +10,7 @@
 			<!-- 定义处理成功后的映射页面 -->
 			<result>/struts2/text/first.jsp</result>
 		</action>
-		<action name="UserAction" class="first.struts2.UserAction">
+		<action name="UserAction" class="first.struts2.user.UserAction">
 			<!-- 定义处理成功后的映射页面 -->
 			<result name="add">/struts2/action/add.jsp</result>
 			<result name="update">/struts2/action/update.jsp</result>

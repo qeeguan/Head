@@ -27,5 +27,11 @@
 		<action name="OgnlAction" class="first.struts2.ognl.OgnlAction">
 			<result>/struts2/ognl/success.jsp</result>
 		</action>
+		<action name="FormAction" class="first.struts2.form.FormAction">
+			<result>/struts2/form/success.jsp</result>
+		</action>
+		<action name="ValidateAction" class="first.struts2.validate.ValidateAction">
+			<result>/struts2/validate/success.jsp</result>
+		</action>
 	</package>
 </struts>

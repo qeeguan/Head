@@ -16,6 +16,6 @@
 		<!-- 打印SQL语句 -->
 		<property name="show_sql">true</property>
 		<!-- 映射文件  -->
-		<mapping resource="com/mr/employee/Employee.hbm.xml"/>
+		<mapping resource="first/hibernate/javabean/User.hbm.xml"/>
  	</session-factory>
  </hibernate-configuration>

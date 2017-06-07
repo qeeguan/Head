@@ -12,7 +12,7 @@ public class HibernateInit {
 
 	static {
 		try {
-			Configuration cfg = new Configuration().configure(); // 加载Hibernate配置文件
+			Configuration cfg = new Configuration().configure(); // 默认加载（路径为classpath根目录下src）Hibernate配置文件
 			sessionFactory = cfg.buildSessionFactory();
 		} catch (Exception e) {
 			e.printStackTrace();

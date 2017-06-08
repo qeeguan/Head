@@ -7,9 +7,10 @@ import org.hibernate.Session;
 
 import first.hibernate.init.HibernateInit;
 import first.hibernate.javabean.factory.Factory;
+import first.hibernate.javabean.people.People;
 import first.hibernate.javabean.user.User;
 
-public class AddUser {
+public class AddPeople {
 	public static void main(String[] args) {
 		Session session = null;
 		/*
@@ -20,7 +21,8 @@ public class AddUser {
 			session = HibernateInit.getSession();
 			session.beginTransaction(); // 开始事务 session.save(user);
 			// many_to_one(session);
-			one_to_many(session);
+			// one_to_many(session);
+			one_to_one(session);
 			session.getTransaction().commit();
 			System.out.println("更新数据库成功!");
 
@@ -68,5 +70,12 @@ public class AddUser {
 			User user = (User) it.next();
 			System.out.println("user.name=" + user.getName());
 		}
+	}
+
+	private static void one_to_one(Session session) {
+		People people = session.get(People.class, new Integer("1"));
+		System.out.println("people.id=" + people.getId());
+		System.out.println("people.name=" + people.getName());
+		System.out.println("idcard.idcard_code=" + people.getIdcard().getIdcard_code());
 	}
 }

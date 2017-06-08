@@ -18,5 +18,7 @@
 		<!-- 映射文件 -->
 		<mapping resource="first/hibernate/javabean/user/User.hbm.xml" />
 		<mapping resource="first/hibernate/javabean/factory/Factory.hbm.xml" />
+		<mapping resource="first/hibernate/javabean/people/People.hbm.xml" />
+		<mapping resource="first/hibernate/javabean/card/IDCard.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

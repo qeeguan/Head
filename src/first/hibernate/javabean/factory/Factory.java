@@ -1,17 +1,31 @@
 package first.hibernate.javabean.factory;
 
+import java.util.Set;
+
+import first.hibernate.javabean.user.User;
+
 public class Factory {
 
-	private int factid;
+	private int factoryid;
 
 	private String factoryname;
 
-	public int getFactid() {
-		return factid;
+	private Set<User> products;
+
+	public Set<User> getProducts() {
+		return products;
 	}
 
-	public void setFactid(int factid) {
-		this.factid = factid;
+	public void setProducts(Set<User> products) {
+		this.products = products;
+	}
+
+	public int getFactoryid() {
+		return factoryid;
+	}
+
+	public void setFactoryid(int factoryid) {
+		this.factoryid = factoryid;
 	}
 
 	public String getFactoryname() {

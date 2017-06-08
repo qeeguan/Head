@@ -1,4 +1,6 @@
-package first.hibernate.javabean;
+package first.hibernate.javabean.user;
+
+import first.hibernate.javabean.factory.Factory;
 
 public class User {
 
@@ -7,6 +9,16 @@ public class User {
 	private String name;
 
 	private String password;
+
+	private Factory factory;
+
+	public Factory getFactory() {
+		return factory;
+	}
+
+	public void setFactory(Factory factory) {
+		this.factory = factory;
+	}
 
 	public int getId() {
 		return id;

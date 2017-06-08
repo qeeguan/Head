@@ -15,6 +15,6 @@
 			<column name="age"></column>
 		</property>
 		<one-to-one name="idcard" class="first.hibernate.javabean.card.IDCard"
-			cascade="all"></one-to-one> <!-- 级联操作 -->
+			cascade="delete"></one-to-one> <!-- 级联操作 -->
 	</class>
 </hibernate-mapping>

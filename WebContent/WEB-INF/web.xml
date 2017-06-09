@@ -12,7 +12,6 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-	<!-- 计数器过滤器 -->
 	<filter>
 		<filter-name>CountFilter</filter-name>
 		<filter-class>first.filter.count.CountFilter</filter-class>
@@ -25,7 +24,6 @@
 		<filter-name>CountFilter</filter-name>
 		<url-pattern>/count/index.jsp</url-pattern>
 	</filter-mapping>
-	<!-- Struts2过滤器 -->
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
@@ -50,7 +48,6 @@
 		<servlet-name>UploadServlet</servlet-name>
 		<url-pattern>/uploadfile/UploadServlet</url-pattern>
 	</servlet-mapping>
-	<!-- 利用Ajax动态显示省份和市县 -->
 	<servlet>
 		<servlet-name>ZoneServlet</servlet-name>
 		<servlet-class>first.servlet.dropdown.ZoneServlet</servlet-class>
@@ -59,7 +56,6 @@
 		<servlet-name>ZoneServlet</servlet-name>
 		<url-pattern>/ajax/dropdown/ZoneServlet</url-pattern>
 	</servlet-mapping>
-	<!-- 利用Ajax动态文件上传进度 -->
 	<servlet>
 		<servlet-name>UpLoad</servlet-name>
 		<servlet-class>first.servlet.processbar.UpLoad</servlet-class>
@@ -67,5 +63,14 @@
 	<servlet-mapping>
 		<servlet-name>UpLoad</servlet-name>
 		<url-pattern>/ajax/processbar/UpLoad</url-pattern>
+	</servlet-mapping>
+	<!-- Hibername实体对象查询 -->
+	<servlet>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<servlet-class>first.servlet.employee.EmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<url-pattern>/employee/EmployeeServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

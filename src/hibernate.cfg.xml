@@ -20,5 +20,7 @@
 		<mapping resource="first/hibernate/javabean/factory/Factory.hbm.xml" />
 		<mapping resource="first/hibernate/javabean/people/People.hbm.xml" />
 		<mapping resource="first/hibernate/javabean/card/IDCard.hbm.xml" />
+		<mapping resource="first/hibernate/javabean/person/Person.hbm.xml" />
+		<mapping resource="first/hibernate/javabean/employee/Employee.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

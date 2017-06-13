@@ -1,4 +1,6 @@
-package first.spring.setter;
+package first.spring.propertyeditor;
+
+import java.util.Date;
 
 public class User {
 	private int id;
@@ -9,6 +11,16 @@ public class User {
 
 	private int age;
 
+	private Date date;
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	/*
 	 * public User(int id, String name) { super(); this.id = id; this.name =
 	 * name; }
@@ -17,6 +29,9 @@ public class User {
 	public void printinfo() {
 		System.out.println("user.id = " + id);
 		System.out.println("user.name = " + name);
+		System.out.println("user.sex = " + sex);
+		System.out.println("user.age = " + age);
+		System.out.println("user.date = " + date);
 	}
 
 	public int getId() {

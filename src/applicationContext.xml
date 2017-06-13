@@ -2,7 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
-	<bean name="user" class="first.spring.setter.User">	<!-- 用id="user"也可以通过 -->
+	<bean name="user" class="first.spring.auto.name.User">
+		<!-- 用id="user"也可以通过 -->
+		<!-- Setter注入 -->
 		<property name="id">
 			<value>001</value>
 		</property>
@@ -15,8 +17,38 @@
 		<property name="age">
 			<value>20</value>
 		</property>
-		<!-- 构造器注入 -->
-		<!-- <constructor-arg> <value>002</value> </constructor-arg> <constructor-arg> 
-			<value>QQ</value> </constructor-arg> -->
+	</bean>
+	<!-- 构造器注入 -->
+	<!-- <constructor-arg> <value>002</value> </constructor-arg> <constructor-arg> 
+		<value>QQ</value> </constructor-arg> -->
+	<bean name="printinfo" class="first.spring.auto.name.PrintInfo"
+		autowire="byName">
+	</bean>
+	<bean name="user1" class="first.spring.propertyeditor.User">
+		<property name="id">
+			<value>001</value>
+		</property>
+		<property name="name">
+			<value>GG</value>
+		</property>
+		<property name="sex">
+			<value>男</value>
+		</property>
+		<property name="age">
+			<value>20</value>
+		</property>
+		<property name="date">
+			<value>2016/10/29</value>
+		</property>
+	</bean>
+	<bean id="customEditorConfigurer"
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<bean id="MyDateEditor" class="first.spring.propertyeditor.MyDateEditor"></bean>
+				</entry>
+			</map>
+		</property>
 	</bean>
 </beans>

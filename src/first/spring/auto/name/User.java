@@ -1,4 +1,4 @@
-package first.spring.setter;
+package first.spring.auto.name;
 
 public class User {
 	private int id;

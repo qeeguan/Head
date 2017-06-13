@@ -15,7 +15,7 @@ public class Manager {
 		System.out.println("user.name = " + user.getName());
 		System.out.println("user.sex = " + user.getSex());
 		System.out.println("user.age = " + user.getAge());
-		System.out.println("------------构造器注入--------------");
-		user.printinfo();
+		/*System.out.println("------------构造器注入--------------");
+		user.printinfo();*/
 	}
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean name="user" class="first.spring.setter.User">	<!-- 用id="user"也可以通过 -->
+		<property name="id">
+			<value>001</value>
+		</property>
+		<property name="name">
+			<value>GG</value>
+		</property>
+		<property name="sex">
+			<value>男</value>
+		</property>
+		<property name="age">
+			<value>20</value>
+		</property>
+		<!-- 构造器注入 -->
+		<!-- <constructor-arg> <value>002</value> </constructor-arg> <constructor-arg> 
+			<value>QQ</value> </constructor-arg> -->
+	</bean>
+</beans>

@@ -72,4 +72,29 @@
 		<property name="dataSource" ref="dataSource">
 		</property>
 	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!-- 数据库连接方言 -->
+				<prop key="dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<!-- 在控制台输出SQL语句 -->
+				<prop key="hibernate.show_sql">true</prop>
+				<!-- 格式化控制台输出的SQL语句 -->
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<!--Hibernate映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>first/spring/hibernate/people/People.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="peopleDAO" class="first.spring.hibernate.dao.PeopleDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>

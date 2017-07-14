@@ -9,13 +9,13 @@
 </head>
 <body>
 	<s:form action="FormAction!register" method="post">
-		<s:textarea name="name" label="用户名：" required="true"
+		<s:textarea name="name" label="用户名" required="true"
 			requiredposition="left">
 		</s:textarea>
-		<s:password name="password" label="密码：" required="true"
+		<s:password name="password" label="密码" required="true"
 			requiredposition="left">
 		</s:password>
-		<s:radio list="#{1:'男',0:'女'}" name="sex" label="性别：" required="true"
+		<s:radio list="#{1:'男',0:'女'}" name="sex" label="性别" required="true"
 			requiredposition="left"></s:radio>
 		<s:select list="{'请选择省份','辽宁','北京','山东','广东'}" label="省份"
 			name="province"></s:select>

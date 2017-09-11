@@ -47,18 +47,18 @@ public class UploadServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		String path = getServletContext().getRealPath("/"); // »ñÈ¡·şÎñÆ÷µØÖ·
-		Part part = request.getPart("file1"); // »ñÈ¡ÓÃ»§Ñ¡ÔñµÄÉÏ´«ÎÄ¼ş
-		if (part.getContentType().contains("image")) { // ÅĞ¶ÏÉÏ´«µÄÎÄ¼şÀàĞÍÊÇ·ñÊÇÍ¼Æ¬
+		String path = getServletContext().getRealPath("/"); // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+		Part part = request.getPart("file1"); // ï¿½ï¿½È¡ï¿½Ã»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½Ä¼ï¿½
+		if (part.getContentType().contains("image")) { // ï¿½Ğ¶ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¼Æ¬
 			ApplicationPart ap = (ApplicationPart) part;
-			String fname1 = ap.getFilename(); // »ñÈ¡ÉÏ´«ÎÄ¼şÃû
-			int path_idx = fname1.lastIndexOf("\\") + 1; // ÅÙ³ıÎÄ¼şÃûÖ®Ç°Â·¾¶µÄ³¤¶È
-			String fname2 = fname1.substring(path_idx, fname1.length()); // ÎÄ¼şÃû
+			String fname1 = ap.getName(); // ï¿½ï¿½È¡ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+			int path_idx = fname1.lastIndexOf("\\") + 1; // ï¿½Ù³ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ö®Ç°Â·ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
+			String fname2 = fname1.substring(path_idx, fname1.length()); // ï¿½Ä¼ï¿½ï¿½ï¿½
 			part.write("f:/tmp/" + fname2);
 			// part.write(path + "/uoload/" + fname2);
-			out.println("ÎÄ¼şÉÏ´«³É¹¦");
+			out.println("ï¿½Ä¼ï¿½ï¿½Ï´ï¿½ï¿½É¹ï¿½");
 		} else {
-			out.println("ÇëÑ¡ÔñÍ¼Æ¬ÎÄ¼ş");
+			out.println("ï¿½ï¿½Ñ¡ï¿½ï¿½Í¼Æ¬ï¿½Ä¼ï¿½");
 		}
 	}
 
